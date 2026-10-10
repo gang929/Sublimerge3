@@ -282,6 +282,7 @@ class SublimergeToggleSettingCommand(_BaseDiffCommand):
                 if self._window.is_3way():
                     return setting in self.VISIBLE_3_WAY
             return False
+        return False
 
     def description(self, setting, value=None):
         key = [setting]

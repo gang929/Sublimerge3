@@ -518,7 +518,7 @@ class Macros:
 
     @classmethod
     def initialize(self):
-        self._load()
+        sublime.set_timeout(self._load, 0)
         Task.spawn(self._write_macros_commands)
 
     @classmethod

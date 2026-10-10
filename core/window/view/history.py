@@ -66,7 +66,7 @@ class DiffViewHistory:
         return
 
     def _find_zero_offset(self):
-        for line in difflib.unified_diff("a\nb\n\\c\n\\d", "a\n\\c\n\\d", n=0):
+        for line in difflib.unified_diff(["a", "b", "\\c", "\\d"], ["a", "\\c", "\\d"], n=0):
             hunk = re.match(self.HUNK_RE, line)
             if hunk:
                 start_left = int(hunk.group(1)) - 1

@@ -6,8 +6,8 @@ except:
 
 from hashlib import sha1
 from webbrowser import open_new_tab as browser_open
-from base64 import decodestring as decode64
-from base64 import encodestring as encode64
+from base64 import decodebytes as decode64
+from base64 import encodebytes as encode64
 from .metadata import PROJECT_VERSION, PROJECT_NAME
 from .debug import console
 from .utils import fopen
